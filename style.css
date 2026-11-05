@@ -227,7 +227,7 @@ a:focus-visible {
 }
 
 .problema-texto p {
-  max-width: 30em;
+  max-width: 30em; /* 600 px com a fonte de 20 px */
   margin-bottom: 24px;
 }
 
@@ -250,4 +250,67 @@ a:focus-visible {
   text-align: center;
   font-size: 24px;
   color: var(--cor-perigo);
+}
+
+/* ---------- Como funciona ---------- */
+.secao-intro {
+  max-width: 30em; /* 600 px com a fonte de 20 px */
+  margin-bottom: 40px;
+}
+
+.passos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.passo {
+  flex: 1 1 240px; /* 4 cards lado a lado, ou menos se faltar espaço */
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-areia);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.passo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* a foto preenche a área sem deformar */
+}
+
+.passo-texto {
+  padding: 24px;
+}
+
+.passo-numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cor-branco);
+  background-color: var(--cor-azul-mar);
+}
+
+.passo h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.passos-extra {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  font-weight: 700;
+}
+
+.passos-extra i {
+  font-size: 32px;
+  color: var(--cor-azul-mar);
 }
