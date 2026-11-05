@@ -104,7 +104,8 @@ img {
 }
 
 /* Contorno visível para quem navega pelo teclado (tecla Tab) */
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid var(--cor-atencao);
   outline-offset: 3px;
 }
@@ -313,4 +314,133 @@ a:focus-visible {
 .passos-extra i {
   font-size: 32px;
   color: var(--cor-azul-mar);
+}
+
+/* ---------- O app ---------- */
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Celular */
+.app-celular {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.celular {
+  width: 300px;
+  min-height: 540px;
+  padding: 40px 24px;
+  border: 14px solid var(--cor-texto); /* a "moldura" do celular */
+  border-radius: 44px;
+  background-color: var(--cor-branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.celular-saudacao {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--cor-azul-mar);
+}
+
+.celular-instrucao {
+  font-size: 20px;
+}
+
+.botao-tobem {
+  width: 190px;
+  height: 190px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--cor-ok);
+  color: var(--cor-branco);
+  font-family: var(--fonte);
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 0 14px rgba(30, 127, 79, 0.2); /* anel verde em volta */
+}
+
+.botao-tobem i {
+  font-size: 40px;
+}
+
+.botao-tobem:active {
+  transform: scale(0.96); /* "afunda" um pouco ao ser apertado */
+}
+
+.celular-proximo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.celular-legenda {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+/* Estados */
+.estados {
+  flex: 1 1 420px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.estado {
+  padding: 24px;
+  border-left: 10px solid; /* a cor vem de cada estado */
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo);
+}
+
+.estado-selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.estado-visor {
+  margin: 12px 0 8px;
+}
+
+.estado-ok {
+  border-color: var(--cor-ok);
+}
+.estado-atencao {
+  border-color: var(--cor-atencao);
+}
+.estado-perigo {
+  border-color: var(--cor-perigo);
+}
+
+.estado-ok .estado-selo {
+  background-color: var(--cor-ok);
+  color: var(--cor-branco);
+}
+.estado-atencao .estado-selo {
+  background-color: var(--cor-atencao);
+  color: var(--cor-texto);
+}
+.estado-perigo .estado-selo {
+  background-color: var(--cor-perigo);
+  color: var(--cor-branco);
 }

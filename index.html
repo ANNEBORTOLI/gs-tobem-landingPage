@@ -176,7 +176,80 @@
         </div>
       </section>
 
-      <section id="app" class="secao secao-provisoria"><h2>O app</h2></section>
+      <!-- ========== O app ========== -->
+      <section id="app" class="secao secao-areia">
+        <div class="conteudo">
+          <h2>O app</h2>
+          <p class="secao-intro">
+            Uma tela, um botão. Quem cuida acompanha tudo pelas cores do
+            semáforo.
+          </p>
+
+          <div class="app">
+            <!-- Tela do celular (exemplo) -->
+            <div class="app-celular">
+              <div class="celular">
+                <p class="celular-saudacao">Bom dia!</p>
+                <p class="celular-instrucao">
+                  Toque no botão para avisar que está tudo bem.
+                </p>
+
+                <button type="button" class="botao-tobem">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Tô bem!</span>
+                </button>
+
+                <p class="celular-proximo">Próximo check-in: 20h</p>
+              </div>
+              <p class="celular-legenda">Exemplo da tela do app</p>
+            </div>
+
+            <!-- Os três estados -->
+            <ul class="estados">
+              <li class="estado estado-ok">
+                <span class="estado-selo"
+                  ><i class="fa-solid fa-circle-check"></i> OK</span
+                >
+                <p class="estado-visor">
+                  No visor do aparelho: <strong>Tudo bem</strong>
+                </p>
+                <p>
+                  Check-in em dia e casa com temperatura agradável. Ninguém
+                  precisa fazer nada.
+                </p>
+              </li>
+
+              <li class="estado estado-atencao">
+                <span class="estado-selo"
+                  ><i class="fa-solid fa-triangle-exclamation"></i>
+                  ATENÇÃO</span
+                >
+                <p class="estado-visor">
+                  No visor do aparelho: <strong>Faca check-in</strong>
+                </p>
+                <p>
+                  Chegou a hora do check-in, ou a casa está ficando quente. O
+                  aparelho lembra o idoso com uma luz e um bipe curto.
+                </p>
+              </li>
+
+              <li class="estado estado-perigo">
+                <span class="estado-selo"
+                  ><i class="fa-solid fa-bell"></i> PERIGO</span
+                >
+                <p class="estado-visor">
+                  No visor do aparelho: <strong>SEM CHECK-IN 13h</strong>
+                </p>
+                <p>
+                  Passou 1 hora do horário sem check-in. A portaria é avisada
+                  para conferir o apartamento.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section id="impacto" class="secao secao-provisoria">
         <h2>Impacto</h2>
       </section>
