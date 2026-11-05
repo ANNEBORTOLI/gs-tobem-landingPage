@@ -17,6 +17,11 @@
   --cor-titulo: var(--cor-azul-mar);
   --cor-menu-destaque: rgba(255, 255, 255, 0.15);
 
+  /* Cores oficiais dos ODS (ONU) */
+  --cor-ods-3: #4c9f38;
+  --cor-ods-10: #dd1367;
+  --cor-ods-11: #fd9d24;
+
   /* Fonte */
   --fonte: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
   --tamanho-texto: 20px;
@@ -324,7 +329,7 @@ button:focus-visible {
   align-items: center;
 }
 
-/* Celular */
+/* Desenho do Celular */
 .app-celular {
   flex: 1 1 320px;
   display: flex;
@@ -404,7 +409,7 @@ button:focus-visible {
 
 .estado {
   padding: 24px;
-  border-left: 10px solid; /* a cor vem de cada estado */
+  border-left: 10px solid;
   border-radius: var(--raio);
   background-color: var(--cor-fundo);
 }
@@ -443,4 +448,143 @@ button:focus-visible {
 .estado-perigo .estado-selo {
   background-color: var(--cor-perigo);
   color: var(--cor-branco);
+}
+
+/* ---------- Impacto ---------- */
+.impacto-destaque {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.impacto-foto {
+  flex: 1 1 420px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--raio);
+}
+
+.indicador {
+  flex: 1 1 400px;
+}
+
+.indicador-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.indicador-comparacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.indicador-valor {
+  display: flex;
+  flex-direction: column;
+}
+
+.indicador-rotulo {
+  font-size: 18px;
+}
+
+.indicador-numero {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.indicador-antes {
+  color: var(--cor-perigo);
+}
+
+.indicador-depois {
+  color: var(--cor-ok);
+}
+
+.indicador-seta {
+  font-size: 36px;
+  color: var(--cor-azul-mar);
+}
+
+.indicador-reducao {
+  margin: 24px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cor-azul-mar);
+}
+
+.indicadores-extra {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.indicadores-extra li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.indicadores-extra i {
+  width: 32px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--cor-azul-mar);
+}
+
+/* ---------- ODS ---------- */
+.ods-titulo {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.ods {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.ods-item {
+  flex: 1 1 280px;
+  padding: 28px;
+  border: 2px solid var(--cor-areia);
+  border-radius: var(--raio);
+}
+
+.ods-numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  border-radius: var(--raio);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.ods-3 {
+  background-color: var(--cor-ods-3);
+  color: var(--cor-branco);
+}
+.ods-10 {
+  background-color: var(--cor-ods-10);
+  color: var(--cor-branco);
+}
+.ods-11 {
+  background-color: var(--cor-ods-11);
+  color: var(--cor-texto);
+}
+
+.ods-item h4 {
+  font-size: 24px;
+  color: var(--cor-titulo);
+  margin-bottom: 8px;
 }
