@@ -1,0 +1,58 @@
+/* ---------- Variáveis (cores, fonte, medidas) ---------- */
+:root {
+  /* Cores da marca */
+  --cor-azul-mar: #0b5c7a;
+  --cor-areia: #f4e4c1;
+  --cor-branco: #ffffff;
+  --cor-texto: #1f2933;
+
+  /* Cores dos estados (as mesmas dos LEDs do dispositivo) */
+  --cor-ok: #1e7f4f;
+  --cor-atencao: #f2b705;
+  --cor-perigo: #b3261e;
+
+  /* Fundo e texto da página (o modo escuro vai trocar só estes) */
+  --cor-fundo: var(--cor-branco);
+  --cor-fundo-alternado: var(--cor-areia);
+  --cor-titulo: var(--cor-azul-mar);
+
+  /* Fonte */
+  --fonte: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
+  --tamanho-texto: 20px;
+
+  /* Medidas */
+  --largura-maxima: 1200px;
+  --espaco: 24px;
+  --raio: 12px;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* rolagem suave ao clicar no menu */
+}
+
+body {
+  font-family: var(--fonte);
+  font-size: var(--tamanho-texto);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-titulo);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
