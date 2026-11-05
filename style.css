@@ -181,3 +181,73 @@ a:focus-visible {
 .botao:hover {
   background-color: var(--cor-branco);
 }
+
+/* ---------- Partes comuns das seções ---------- */
+.secao-areia {
+  background-color: var(--cor-fundo-alternado);
+}
+
+.conteudo {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+}
+
+.secao h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+/* ---------- O problema ---------- */
+.problema {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+.problema-numero {
+  flex: 1 1 320px; /* cresce, encolhe e começa com 320 px */
+}
+
+.numero-grande {
+  display: block;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.numero-legenda {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.problema-texto {
+  flex: 2 1 400px; /* cresce o dobro do número: fica com mais espaço */
+}
+
+.problema-texto p {
+  max-width: 30em;
+  margin-bottom: 24px;
+}
+
+.problema-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.problema-lista li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+}
+
+.problema-lista i {
+  width: 32px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--cor-perigo);
+}
