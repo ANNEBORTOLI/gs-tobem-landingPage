@@ -108,3 +108,76 @@ a:focus-visible {
   outline: 3px solid var(--cor-atencao);
   outline-offset: 3px;
 }
+
+/* ---------- Seções ---------- */
+.secao {
+  scroll-margin-top: 100px; /* o título não fica escondido atrás do menu */
+  padding: 80px var(--espaco);
+}
+
+/* PROVISÓRIO: dá altura às seções vazias para testar o menu. */
+.secao-provisoria {
+  min-height: 600px;
+  border-bottom: 2px dashed var(--cor-areia);
+}
+
+/* ---------- Topo (hero) ---------- */
+.hero {
+  padding: 32px var(--espaco) 0;
+  scroll-margin-top: 100px;
+}
+
+.hero-conteudo {
+  max-width: var(--largura-maxima); /* a foto não estica além de 1200 px */
+  margin: 0 auto;
+  min-height: 560px;
+  padding: 48px;
+  border-radius: var(--raio);
+  display: flex;
+  align-items: center;
+
+  /* Faixa azul (a cor --cor-azul-mar com transparência) por cima da foto */
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(11, 92, 122, 0.92) 0%,
+      rgba(11, 92, 122, 0.75) 40%,
+      rgba(11, 92, 122, 0) 70%
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+
+.hero-texto {
+  max-width: 560px;
+  color: var(--cor-branco);
+}
+
+.hero h1 {
+  color: var(--cor-branco);
+  font-size: 52px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 24px 0 32px;
+}
+
+/* ---------- Botão ---------- */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 32px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cor-azul-mar);
+  background-color: var(--cor-areia);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background-color: var(--cor-branco);
+}
