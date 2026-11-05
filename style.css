@@ -121,12 +121,6 @@ button:focus-visible {
   padding: 80px var(--espaco);
 }
 
-/* PROVISÓRIO: dá altura às seções vazias para testar o menu. */
-.secao-provisoria {
-  min-height: 600px;
-  border-bottom: 2px dashed var(--cor-areia);
-}
-
 /* ---------- Topo (hero) ---------- */
 .hero {
   padding: 32px var(--espaco) 0;
@@ -587,4 +581,82 @@ button:focus-visible {
   font-size: 24px;
   color: var(--cor-titulo);
   margin-bottom: 8px;
+}
+
+/* ---------- Equipe ---------- */
+.equipe {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pessoa {
+  flex: 1 1 360px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo);
+}
+
+.pessoa-foto {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--cor-azul-mar);
+}
+
+.pessoa h3 {
+  font-size: 26px;
+}
+
+.pessoa-rm {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  padding: 56px var(--espaco) 32px;
+  color: var(--cor-branco);
+  background-color: var(--cor-azul-mar);
+}
+
+.rodape-conteudo {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.rodape-marca {
+  flex: 1 1 320px;
+}
+
+.rodape-logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.rodape-info {
+  flex: 1 1 360px;
+}
+
+.rodape a {
+  color: var(--cor-areia);
+}
+
+.rodape-creditos {
+  max-width: var(--largura-maxima);
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--cor-menu-destaque);
+  font-size: 16px;
 }
