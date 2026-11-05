@@ -15,6 +15,7 @@
   --cor-fundo: var(--cor-branco);
   --cor-fundo-alternado: var(--cor-areia);
   --cor-titulo: var(--cor-azul-mar);
+  --cor-menu-destaque: rgba(255, 255, 255, 0.15);
 
   /* Fonte */
   --fonte: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
@@ -55,4 +56,55 @@ h3 {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+.cabecalho {
+  position: sticky; /* fica preso no topo ao rolar */
+  top: 0;
+  z-index: 10; /* fica por cima das seções */
+  background-color: var(--cor-azul-mar);
+}
+
+.cabecalho-conteudo {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 16px var(--espaco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* em tela estreita, o menu desce para a linha de baixo */
+  gap: 16px;
+}
+
+.logo {
+  color: var(--cor-branco);
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 16px; /* área de clique grande */
+  color: var(--cor-branco);
+  text-decoration: none;
+  border-radius: var(--raio);
+}
+
+.menu a:hover {
+  background-color: var(--cor-menu-destaque);
+}
+
+/* Contorno visível para quem navega pelo teclado (tecla Tab) */
+a:focus-visible {
+  outline: 3px solid var(--cor-atencao);
+  outline-offset: 3px;
 }
