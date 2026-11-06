@@ -16,6 +16,8 @@
   --cor-fundo-alternado: var(--cor-areia);
   --cor-titulo: var(--cor-azul-mar);
   --cor-menu-destaque: rgba(255, 255, 255, 0.15);
+  --cor-texto-fixo: #1f2933;
+  --cor-perigo-texto: var(--cor-perigo);
 
   /* Cores oficiais dos ODS (ONU) */
   --cor-ods-3: #4c9f38;
@@ -207,6 +209,7 @@ button:focus-visible {
 
 .problema-numero {
   flex: 1 1 320px; /* cresce, encolhe e começa com 320 px */
+  color: var(--cor-titulo);
 }
 
 .numero-grande {
@@ -249,7 +252,7 @@ button:focus-visible {
   width: 32px;
   text-align: center;
   font-size: 24px;
-  color: var(--cor-perigo);
+  color: var(--cor-perigo-texto);
 }
 
 /* ---------- Como funciona ---------- */
@@ -268,7 +271,7 @@ button:focus-visible {
 .passo {
   flex: 1 1 240px; /* 4 cards lado a lado, ou menos se faltar espaço */
   background-color: var(--cor-fundo);
-  border: 2px solid var(--cor-areia);
+  border: 2px solid var(--cor-fundo-alternado);
   border-radius: var(--raio);
   overflow: hidden;
 }
@@ -312,7 +315,7 @@ button:focus-visible {
 
 .passos-extra i {
   font-size: 32px;
-  color: var(--cor-azul-mar);
+  color: var(--cor-titulo);
 }
 
 /* ---------- O app ---------- */
@@ -335,7 +338,8 @@ button:focus-visible {
   width: 300px;
   min-height: 540px;
   padding: 40px 24px;
-  border: 14px solid var(--cor-texto); /* a "moldura" do celular */
+  border: 14px solid var(--cor-texto-fixo);
+  color: var(--cor-texto-fixo);
   border-radius: 44px;
   background-color: var(--cor-branco);
   display: flex;
@@ -437,7 +441,7 @@ button:focus-visible {
 }
 .estado-atencao .estado-selo {
   background-color: var(--cor-atencao);
-  color: var(--cor-texto);
+  color: var(--cor-texto-fixo);
 }
 .estado-perigo .estado-selo {
   background-color: var(--cor-perigo);
@@ -493,7 +497,7 @@ button:focus-visible {
 }
 
 .indicador-antes {
-  color: var(--cor-perigo);
+  color: var(--cor-perigo-texto);
 }
 
 .indicador-depois {
@@ -502,14 +506,14 @@ button:focus-visible {
 
 .indicador-seta {
   font-size: 36px;
-  color: var(--cor-azul-mar);
+  color: var(--cor-titulo);
 }
 
 .indicador-reducao {
   margin: 24px 0;
   font-size: 22px;
   font-weight: 700;
-  color: var(--cor-azul-mar);
+  color: var(--cor-titulo);
 }
 
 .indicadores-extra {
@@ -529,7 +533,7 @@ button:focus-visible {
   width: 32px;
   text-align: center;
   font-size: 24px;
-  color: var(--cor-azul-mar);
+  color: var(--cor-titulo);
 }
 
 /* ---------- ODS ---------- */
@@ -548,7 +552,7 @@ button:focus-visible {
 .ods-item {
   flex: 1 1 280px;
   padding: 28px;
-  border: 2px solid var(--cor-areia);
+  border: 2px solid var(--cor-fundo-alternado);
   border-radius: var(--raio);
 }
 
@@ -574,7 +578,7 @@ button:focus-visible {
 }
 .ods-11 {
   background-color: var(--cor-ods-11);
-  color: var(--cor-texto);
+  color: var(--cor-texto-fixo);
 }
 
 .ods-item h4 {
@@ -659,4 +663,35 @@ button:focus-visible {
   padding-top: 24px;
   border-top: 1px solid var(--cor-menu-destaque);
   font-size: 16px;
+}
+
+/* ---------- Modo escuro ---------- */
+/* O JS coloca a classe "tema-escuro" no <body>.
+   Aqui são os valores das variáveis de função. */
+body.tema-escuro {
+  --cor-fundo: #0f1a20;
+  --cor-fundo-alternado: #172830;
+  --cor-texto: #e8eef1;
+  --cor-titulo: #8ccde6;
+  --cor-perigo-texto: #ff8a80;
+}
+
+/* ---------- Botão de tema ---------- */
+.botao-tema {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 2px solid var(--cor-branco);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--cor-branco);
+  font-family: var(--fonte);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-tema:hover {
+  background-color: var(--cor-menu-destaque);
 }

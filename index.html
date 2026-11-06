@@ -8,23 +8,20 @@
       name="description"
       content="TôBem: check-in diário para idosos que moram sozinhos em Copacabana. Se o check-in não acontece, o condomínio é avisado."
     />
-
-    <!-- Fonte Atkinson Hyperlegible (feita para pessoas com baixa visão) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Ícones Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- JS -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="cabecalho">
@@ -42,6 +39,10 @@
             <li><a href="#equipe">Equipe</a></li>
           </ul>
         </nav>
+        <button type="button" id="botao-tema" class="botao-tema">
+          <i id="icone-tema" class="fa-solid fa-moon"></i>
+          <span id="texto-tema">Modo escuro</span>
+        </button>
       </div>
     </header>
 
