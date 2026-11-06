@@ -695,3 +695,92 @@ body.tema-escuro {
 .botao-tema:hover {
   background-color: var(--cor-menu-destaque);
 }
+
+/* ---------- Simulador ---------- */
+.simulador {
+  margin-top: 80px;
+}
+
+.simulador h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.simulador-corpo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Controles */
+.controles {
+  flex: 1 1 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.controle label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.controle input {
+  width: 100%;
+  accent-color: var(--cor-azul-mar); /* cor do controle deslizante */
+  cursor: pointer;
+}
+
+/* Visor */
+.visor {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 24px;
+  background-color: var(--cor-azul-mar);
+}
+
+.visor-tela {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #e3f1ea;
+  color: var(--cor-texto-fixo);
+  font-family: "Courier New", monospace; /* letras de visor LCD */
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.visor-leds {
+  display: flex;
+  gap: 20px;
+}
+
+.led {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #3d7a92; /* LED apagado */
+}
+
+/* O LED aceso depende da classe do visor */
+.visor.estado-ok .led-verde {
+  background-color: var(--cor-ok);
+  box-shadow: 0 0 12px 4px var(--cor-ok);
+}
+
+.visor.estado-atencao .led-amarelo {
+  background-color: var(--cor-atencao);
+  box-shadow: 0 0 12px 4px var(--cor-atencao);
+}
+
+.visor.estado-perigo .led-vermelho {
+  background-color: var(--cor-perigo);
+  box-shadow: 0 0 12px 4px var(--cor-perigo);
+}

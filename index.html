@@ -249,6 +249,82 @@
                 </p>
               </li>
             </ul>
+
+            <!-- Simulador do aparelho -->
+            <div class="simulador">
+              <h3>Simule o aparelho</h3>
+              <p class="secao-intro">
+                Arraste os controles e veja o que o aparelho mostraria. As
+                regras são as mesmas do dispositivo real.
+              </p>
+
+              <div class="simulador-corpo">
+                <!-- Controles -->
+                <div class="controles">
+                  <div class="controle">
+                    <label for="temperatura">
+                      Temperatura <span id="valor-temperatura">25 °C</span>
+                    </label>
+                    <input
+                      type="range"
+                      id="temperatura"
+                      min="15"
+                      max="40"
+                      step="0.5"
+                      value="25"
+                    />
+                  </div>
+
+                  <div class="controle">
+                    <label for="umidade">
+                      Umidade <span id="valor-umidade">60 %</span>
+                    </label>
+                    <input
+                      type="range"
+                      id="umidade"
+                      min="10"
+                      max="100"
+                      step="1"
+                      value="60"
+                    />
+                  </div>
+
+                  <div class="controle">
+                    <label for="horas">
+                      Horas desde o último check-in
+                      <span id="valor-horas">2 h</span>
+                    </label>
+                    <input
+                      type="range"
+                      id="horas"
+                      min="0"
+                      max="24"
+                      step="1"
+                      value="2"
+                    />
+                  </div>
+                </div>
+
+                <!-- Visor -->
+                <div id="visor" class="visor estado-ok">
+                  <div class="visor-tela">
+                    <p id="visor-leitura">25.0C 60%</p>
+                    <p id="visor-mensagem">Tudo bem</p>
+                  </div>
+
+                  <div class="visor-leds">
+                    <span class="led led-verde"></span>
+                    <span class="led led-amarelo"></span>
+                    <span class="led led-vermelho"></span>
+                  </div>
+
+                  <span class="estado-selo">
+                    <i id="visor-icone" class="fa-solid fa-circle-check"></i>
+                    <span id="visor-estado">OK</span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
