@@ -190,17 +190,19 @@
             <!-- Tela do celular (exemplo) -->
             <div class="app-celular">
               <div class="celular">
-                <p class="celular-saudacao">Bom dia!</p>
-                <p class="celular-instrucao">
+                <p id="saudacao" class="celular-saudacao">Bom dia!</p>
+                <p id="instrucao" class="celular-instrucao" aria-live="polite">
                   Toque no botão para avisar que está tudo bem.
                 </p>
 
-                <button type="button" class="botao-tobem">
-                  <i class="fa-solid fa-heart"></i>
-                  <span>Tô bem!</span>
+                <button type="button" id="botao-tobem" class="botao-tobem">
+                  <i id="icone-tobem" class="fa-solid fa-heart"></i>
+                  <span id="texto-tobem">Tô bem!</span>
                 </button>
 
-                <p class="celular-proximo">Próximo check-in: 20h</p>
+                <p id="proximo-checkin" class="celular-proximo">
+                  Próximo check-in: 20h
+                </p>
               </div>
               <p class="celular-legenda">Exemplo da tela do app</p>
             </div>
